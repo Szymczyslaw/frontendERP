@@ -1,11 +1,30 @@
-import React from 'react';
-import '../styles/Inventory.css';
+import React, { useEffect, useState } from 'react';
+import { getProducts } from '../../services/apiService'; // Adjust the path based on your folder structure
 
 const Inventory = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await getProducts();
+        setProducts(response.data);
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
   return (
-    <div className="inventory">
-      <h2>Inventory Management</h2>
-      {}
+    <div>
+      <h1>Inventory</h1>
+      <ul>
+        {products.map(product => (
+          <li key={product.id}>{product.name} - ${product.price}</li>
+        ))}
+      </ul>
     </div>
   );
 };
