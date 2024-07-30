@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getSales } from '../../services/apiService'; // Adjust the path based on your folder structure
+import { getSales } from '../../services/apiService';
 
 const Sales = () => {
   const [sales, setSales] = useState([]);

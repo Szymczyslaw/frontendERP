@@ -1,9 +1,9 @@
-// import axios from 'axios';
+import axios from 'axios';
 
-// const API_URL = 'http://localhost:8080/api'; // Replace with your backend URL
+const API_URL = 'http://localhost:8080/api'; // tutaj zależy na jakim localhoście jest backend
 
-// // Product API methods
-// export const getProducts = () => axios.get(`${API_URL}/products`);
+// Product API methods
+export const getProducts = () => axios.get(`${API_URL}/products`);
 
-// // Sales API methods (assuming you have a similar endpoint for sales)
-// export const getSales = () => axios.get(`${API_URL}/sales`);
+// Sales API methods
+export const getSales = () => axios.get(`${API_URL}/sales`);

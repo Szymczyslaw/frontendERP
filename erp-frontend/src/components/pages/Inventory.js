@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getProducts } from '../../services/apiService'; // Adjust the path based on your folder structure
+import { getProducts } from '../../services/apiService';
 
 const Inventory = () => {
   const [products, setProducts] = useState([]);
