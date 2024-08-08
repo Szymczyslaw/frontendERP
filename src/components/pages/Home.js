@@ -20,16 +20,19 @@ const Home = () => {
                 <li><Link to="/">Home Page</Link></li>
                 <li><Link to="/inventory">Inventory</Link></li>
                 <li><Link to="/sales">Sales</Link></li>
+                <li><Link to="/customers">Customers</Link></li>
+                <li><Link to="/contracts">Contracts</Link></li>
             </ul>
+
         </nav>
-      <div className="container">
-        <div className="toggle">
-          <button onClick={toggleForm}>
-            {isLogin ? 'Switch to Register' : 'Switch to Login'}
-          </button>
+        <div className="container">
+            <div className="toggle">
+                <button onClick={toggleForm}>
+                    {isLogin ? 'Switch to Register' : 'Switch to Login'}
+                </button>
+            </div>
+            {isLogin ? <LoginForm/> : <RegisterForm/>}
         </div>
-        {isLogin ? <LoginForm /> : <RegisterForm />}
-      </div>
     </div>
   );
 };

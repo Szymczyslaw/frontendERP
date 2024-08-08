@@ -1,0 +1,20 @@
+.app {
+    display: flex;
+}
+
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+/* Customers.module.css */
+
+.customerList {
+    padding: 20px;
+    list-style: none;
+}
+
+.customerItem {
+    margin: 10px 0;
+    color: darkblue;
+}
