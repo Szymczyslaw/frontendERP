@@ -1,36 +1,42 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import React, {useEffect, useState, useMemo} from 'react';
 import {useNavigate, Link} from 'react-router-dom';
 import {getCustomers} from '../../services/apiService';
-import styles from '../styles/Customers.module.css';
+import styles from '../styles/Customers.css';
 
 const Customers = () => {
     const navigate = useNavigate();
     const [customers, setCustomers] = useState([]);
     const [error, setError] = useState('');
-    const [sortConfig, setSortConfig] = useState({ key: null, direction: 'ascending' });
+    const [sortConfig, setSortConfig] = useState({key: null, direction: 'ascending'});
 
     const handleEdit = (customerId) => {
         navigate(`/edit-customer/${customerId}`);
     };
 
-    const handleSort = () => {
+    const handleSort = (key) => {
         let direction = 'ascending';
-        if (sortConfig.key === 'name' && sortConfig.direction === 'ascending') {
+        if (sortConfig.key === key && sortConfig.direction === 'ascending') {
             direction = 'descending';
         }
-        setSortConfig({ key: 'name', direction });
+        setSortConfig({key, direction});
     };
 
     const sortedCustomers = useMemo(() => {
         let sortableItems = [...customers];
         if (sortConfig !== null) {
             sortableItems.sort((a, b) => {
-                const aName = `${a.firstName} ${a.lastName}`;
-                const bName = `${b.firstName} ${b.lastName}`;
-                if (aName < bName) {
+                let aValue = a[sortConfig.key];
+                let bValue = b[sortConfig.key];
+
+                if (sortConfig.key === 'name') {
+                    aValue = `${a.firstName} ${a.lastName}`;
+                    bValue = `${b.firstName} ${b.lastName}`;
+                }
+
+                if (aValue < bValue) {
                     return sortConfig.direction === 'ascending' ? -1 : 1;
                 }
-                if (aName > bName) {
+                if (aValue > bValue) {
                     return sortConfig.direction === 'ascending' ? 1 : -1;
                 }
                 return 0;
@@ -58,43 +64,57 @@ const Customers = () => {
     }, []);
 
     return (
-        <div className={styles.container}>
-            <h1 className={styles.header}>Customers:</h1>
-            <Link to="/add-customer" className={`${styles.button} btn-primary`}>Add Customer</Link>
-            {error ? (
-                <p>{error}</p>
-            ) : (
-                <table className={styles.table}>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th onClick={handleSort}>Name</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {sortedCustomers.map(customer => (
-                            <tr key={customer.id}>
-                                <td>
-                                    <Link to={`/customers/${customer.id}`} className={styles.link}>
-                                        {customer.id}
-                                    </Link>
-                                </td>
-                                <td>{customer.firstName} {customer.lastName}</td>
-                                <td>
-                                    <button onClick={() => handleEdit(customer.id)} className={styles.button}>Edit
-                                    </button>
-                                    <button className={styles.button}>Delete
-                                    </button>
 
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            )}
-        </div>
-    );
-};
+        <div className="customers">
+                <h2 className={styles.header}>Customers:</h2>
+            <div className="container">
+                 <div className={styles.container}>
+                        <Link to="/add-customer" className={`${styles.button} btn-primary`}>Add Customer</Link>
+                        {error ? (
+                            <p>{error}</p>
+                        ) : (
+                            <table className={styles.table}>
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Id</th>
 
-export default Customers;
+                                    <th onClick={() => handleSort('name')} className={styles.sortableHeader}>Name</th>
+                                    <th onClick={() => handleSort('dateAdded')} className={styles.sortableHeader}>Date
+                                        Added
+                                    </th>
+                                    <th>Actions</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {sortedCustomers.map((customer, index) => (
+                                    <tr key={customer.id}>
+                                        <td>{index + 1}</td>
+                                        <td>
+                                            <Link to={`/customers/${customer.id}`} className={styles.link}>
+                                                {customer.id}
+                                            </Link>
+                                        </td>
+                                        <td>
+                                            {customer.firstName} {customer.lastName}
+                                        </td>
+                                        <td>{customer.dateAdded || 'N/A'}</td>
+                                        <td>
+                                            <button onClick={() => handleEdit(customer.id)}
+                                                    className={styles.button}>Edit
+                                            </button>
+                                            <button className={styles.button}>Delete</button>
+                                        </td>
+                                    </tr>
+                                ))}
+                                </tbody>
+                            </table>
+                        )}
+                    </div>
+                </div>
+            </div>
+
+            );
+            };
+
+            export default Customers;

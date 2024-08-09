@@ -48,7 +48,10 @@ html, body, #root {
     box-sizing: border-box;
 }
 
+/* Main content area style */
 .main-content {
-    height: calc(100% - 2 * 56px); /* Adjust this if your navbar heights are different */
-    overflow-y: auto;
+    background-color: #3e6a96; /* Light gray background */
+    padding: 20px;
+    min-height: 100vh; /* Ensure it takes the full height of the viewport */
+    box-sizing: border-box;
 }

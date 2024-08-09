@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import LoginForm from '../LoginForm';
-import RegisterForm from '../RegisterForm';
+import LoginForm from './LoginForm';
+import RegisterForm from './RegisterForm';
 import '../styles/Home.css';
 
 const Home = () => {
@@ -12,27 +11,18 @@ const Home = () => {
   };
 
   return (
-
     <div className="home">
-      <h1>Welcome to ERP</h1>
-        <nav className="sidebar">
-            <ul>
-                <li><Link to="/">Home Page</Link></li>
-                <li><Link to="/inventory">Inventory</Link></li>
-                <li><Link to="/sales">Sales</Link></li>
-                <li><Link to="/customers">Customers</Link></li>
-                <li><Link to="/contracts">Contracts</Link></li>
-            </ul>
-
-        </nav>
-        <div className="container">
-            <div className="toggle">
-                <button onClick={toggleForm}>
-                    {isLogin ? 'Switch to Register' : 'Switch to Login'}
-                </button>
-            </div>
-            {isLogin ? <LoginForm/> : <RegisterForm/>}
+      <h2>Welcome User 123!</h2>
+      <div className="container">
+        <div className="toggle">
+          <button onClick={toggleForm}>
+            {isLogin ? 'Switch to Register' : 'Switch to Login'}
+          </button>
         </div>
+        <div className="auth-container">
+          {isLogin ? <LoginForm /> : <RegisterForm />}
+        </div>
+      </div>
     </div>
   );
 };
