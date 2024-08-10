@@ -3,13 +3,11 @@
 .secondary-navbar {
     background-color: #6684a2; /* Solid background color */
     padding: 10px 0;
-    border-bottom: 1px solid #ddd;
-    border-width: 5px;
     width: 100%;
     box-sizing: border-box;
     height: 35px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adding box-shadow for puffed effect */
-
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adding box-shadow for puffed effect */
+    border: 1px #6684a2;
 }
 
 .secondary-navbar ul {

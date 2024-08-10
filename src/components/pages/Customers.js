@@ -69,7 +69,6 @@ const Customers = () => {
                 <h2 className={styles.header}>Customers:</h2>
             <div className="container">
                  <div className={styles.container}>
-                        <Link to="/add-customer" className={`${styles.button} btn-primary`}>Add Customer</Link>
                         {error ? (
                             <p>{error}</p>
                         ) : (

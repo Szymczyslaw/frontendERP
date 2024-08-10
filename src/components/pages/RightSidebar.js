@@ -3,7 +3,7 @@ import '../styles/RightSidebar.css';
 
 const RightSidebar = () => {
     return (
-        <div className="bg-light border-right" id="sidebar-wrapper">
+        <div className="border-right" id="sidebar-wrapper">
 
             <div className="right-sidebar">
                 <ul>

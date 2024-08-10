@@ -5,6 +5,8 @@ html, body, #root {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background-color: rgba(155, 157, 197, 0.09);;
+
 }
 
 .container-fluid {
@@ -19,19 +21,24 @@ html, body, #root {
     display: flex;
     flex-direction: row;
     margin: 0;
+    height: calc(100% - 112px); /* Adjusted for navbar heights */
 }
 
-.col-12, .col-md-2, .col-md-10 {
+.col-12, .col-md-2 {
     padding: 0;
 }
 
 .col-md-2 {
-    flex: 0 0 200px; /* Adjust this value to set the width of the sidebar */
+    padding: 1rem;
+    padding-top: 5%;
+    flex: 0 0 200px; /* Sidebar width */
+    flex-direction: column;
+    align-items: stretch;
+    height: 100%; /* Ensure sidebar takes full height */
 }
 
 .col-md-10 {
     flex: 1;
-    overflow: auto;
 }
 
 .navbar-container, .secondary-navbar {
@@ -49,6 +56,12 @@ html, body, #root {
 }
 
 .main-content {
-    height: calc(100% - 2 * 56px); /* Adjust this if your navbar heights are different */
-    overflow-y: auto;
+    background-color: #3e6a96;
+    width: auto;
+    padding: 1%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
 }

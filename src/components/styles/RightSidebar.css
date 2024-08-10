@@ -1,14 +1,16 @@
 .right-sidebar {
-    background-color: #f7f7f7;
     padding: 20px;
-    border-left: 1px solid #ddd;
-    position: fixed;
-    top: 0;
-    right: 0;
+    border-right: 1px solid #ddd;
     height: 100%;
     width: 200px;
-    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
     overflow-y: auto;
+    z-index: 1000; /* Ensure the sidebar is above other content */
+    border-radius: 8px;
+    /* Add a subtle gradient for the embossed effect */
+    background: linear-gradient(145deg, #ffffff, #d5d5d5);
+    /* Add box shadows for the 3D effect */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2),
+    -5px -5px 15px rgba(255, 255, 255, 0.7);
 }
 
 .right-sidebar ul {
@@ -27,6 +29,5 @@
 }
 
 .right-sidebar a:hover {
-    color: #2980b9;
-    text-decoration: underline;
+    color: #6684a2;
 }

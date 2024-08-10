@@ -25,9 +25,6 @@ const App = () => {
                     <div className="col-md-2">
                         <Sidebar/>
                     </div>
-                    <div className="col-md-2">
-                        <RightSidebar/> {/* Add Right Sidebar */}
-                    </div>
                     <div className="col-md-8">
                         <Routes>
                             <Route path="/" element={<Home/>}/>
@@ -40,7 +37,9 @@ const App = () => {
                             <Route path="/edit-customer/:id" element={<EditCustomer/>}/>
                         </Routes>
                     </div>
-
+                    <div className="col-md-2">
+                        <RightSidebar/> {/* Add Right Sidebar */}
+                    </div>
                 </div>
             </div>
         </Router>

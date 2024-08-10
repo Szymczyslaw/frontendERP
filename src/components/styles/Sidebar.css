@@ -1,0 +1,59 @@
+.sidebar {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    overflow-y: auto;
+    z-index: 1000; /* Ensure the sidebar is above other content */
+    /* Add a subtle gradient for the embossed effect */
+    background: linear-gradient(145deg, #ffffff, #d5d5d5);
+    /* Add box shadows for the 3D effect */
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.sidebar .list-group {
+    padding: 0;
+    background-color: transparent;
+}
+
+.sidebar .list-group-item {
+    color: rgba(185, 182, 200, 0.99);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+.sidebar-title{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: rgba(0, 6, 39, 0.6);
+}
+.sidebar .list-group-item:hover,
+.sidebar .list-group-item:active,
+.sidebar .list-group-item:focus {
+    color: #6684a2;
+    outline: none; /* Remove the default focus outline */
+}
+
+.submenu {
+    padding-left: 20px; /* Indent submenu items */
+    font-size: smaller;
+}
+
+.submenu .list-group-item {
+    padding: 8px 15px;
+    font-weight: normal;
+}
+
+.submenu .list-group-item:hover {
+    text-decoration: none;
+}
