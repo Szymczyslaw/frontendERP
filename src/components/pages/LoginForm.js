@@ -1,10 +1,10 @@
 import React from 'react';
-import './styles/LoginForm.css';
+import '../styles/LoginForm.css';
 
 const LoginForm = () => {
   return (
     <div className="login-form">
-      <h2>Login</h2>
+      <p>Login</p>
       <form>
         <div>
           <label htmlFor="login-username">Username:</label>

@@ -1,0 +1,57 @@
+/* App.css */
+
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container-fluid {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.row {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+.col-12, .col-md-2, .col-md-10 {
+    padding: 0;
+}
+
+.col-md-2 {
+    flex: 0 0 200px; /* Adjust this value to set the width of the sidebar */
+}
+
+.col-md-10 {
+    flex: 1;
+    overflow: auto;
+}
+
+.navbar-container, .secondary-navbar {
+    width: 100%;
+}
+
+.navbar {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.secondary-navbar {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Main content area style */
+.main-content {
+    background-color: #3e6a96; /* Light gray background */
+    padding: 20px;
+    min-height: 100vh; /* Ensure it takes the full height of the viewport */
+    box-sizing: border-box;
+}

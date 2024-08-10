@@ -1,0 +1,41 @@
+/* SecondaryNavbar.css */
+
+.secondary-navbar {
+    background-color: #6684a2; /* Solid background color */
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    border-width: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 35px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adding box-shadow for puffed effect */
+
+}
+
+.secondary-navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Remove the margin to center the list */
+    padding: 0; /* Remove padding to center the list */
+    list-style-type: none;
+    height: 100%; /* Ensure the ul takes the full height of the navbar */
+}
+
+.secondary-navbar li {
+    display: flex;
+    align-items: center; /* Vertically center the text inside the li */
+    margin: 0 15px;
+    height: 100%; /* Ensure the li takes the full height of the navbar */
+}
+
+.secondary-navbar a {
+    text-decoration: none;
+    color: #fff; /* Text color */
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.secondary-navbar a:hover {
+    color: rgba(185, 182, 182, 0.99);
+}

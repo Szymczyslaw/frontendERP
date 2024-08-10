@@ -1,0 +1,105 @@
+/* Navbar.css */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white; /* Light blue background */
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 70px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    color: #525bff;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    transform: rotate(45deg); /* Rotate the logo 45 degrees */
+    margin-left: 50px;
+}
+
+.company-name {
+    color: rgba(0, 6, 39, 0.28);
+    font-weight: bold;
+    font-family: 'Brush Script MT', cursive; /* Fancy font for company name */
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: auto;
+}
+
+.search-bar {
+    border: none;
+    border-bottom: 2px solid rgba(0, 6, 39, 0.28);
+    outline: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: border-bottom-color 0.3s;
+    background-color: transparent;
+    width: 400px;
+}
+
+.search-bar:focus {
+    border-bottom-color: rgba(0, 6, 39, 0.28);
+}
+
+.search-icon-mobile {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-icon {
+    font-size: 18px;
+    color: rgba(0, 6, 39, 0.28);
+}
+
+.user-section {
+    display: flex;
+    align-items: center;
+}
+
+.user-name {
+    color: rgba(0, 6, 39, 0.46);
+    margin-right: 70px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.user-icon {
+    margin-right: 10px; /* Adding margin between icon and name */
+    color: rgba(0, 6, 39, 0.46);
+}
+
+/* Additional CSS from shared styles */
+.site-header__search button, .site-header__search input {
+    background-color: #525bff;
+    border: 0;
+    border-radius: 0;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
