@@ -1,7 +1,7 @@
 
 .customers {
-    padding: 20px;
-    background-color: #f1f1f1;
+    padding: 1px;
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,13 +10,13 @@
 }
 
 .container {
-    padding: 20px;
+    padding: 5%;
     background-color: #f1f1f1;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     flex-grow: 1;
     max-width: 1000px; /* Center the container */
-    margin-left: auto; /* Center the container */
+    margin: auto; /* Center the container */
     display: flex;
     flex-direction: column;
     align-items: center;

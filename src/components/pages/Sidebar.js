@@ -1,19 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Sidebar.css';
 
 const Sidebar = () => {
+    const [isCustomerMenuOpen, setIsCustomerMenuOpen] = useState(false);
+
+    const toggleCustomerMenu = () => {
+        setIsCustomerMenuOpen(!isCustomerMenuOpen);
+    };
+
     return (
-        <div className="bg-light border-right" id="sidebar-wrapper">
-            <div className="list-group list-group-flush">
-                <Link to="/" className="list-group-item list-group-item-action bg-light">Home</Link>
-                <Link to="/inventory" className="list-group-item list-group-item-action bg-light">Inventory</Link>
-                <Link to="/sales" className="list-group-item list-group-item-action bg-light">Sales</Link>
-                <Link to="/customers" className="list-group-item list-group-item-action bg-light">Customers</Link>
-                <Link to="/contracts" className="list-group-item list-group-item-action bg-light">Contracts</Link>
+        <div className="sidebar">
+            <div className="sidebar-title">
+                Departments
+            </div>
+            <div className="list-group">
+                <Link to="/" className="list-group-item list-group-item-action">Home</Link>
+                <Link to="/inventory" className="list-group-item list-group-item-action">Inventory</Link>
+                <Link to="/sales" className="list-group-item list-group-item-action">Sales</Link>
+
+                <div className="list-group-item list-group-item-action" onClick={toggleCustomerMenu}>
+                    Customers {isCustomerMenuOpen}
+                </div>
+                {isCustomerMenuOpen && (
+                    <div className="submenu">
+                        <Link to="/customers" className="list-group-item list-group-item-action">Show customers</Link>
+                        <Link to="/add-customer" className="list-group-item list-group-item-action">Add customer</Link>
+                    </div>
+                )}
+
+                <Link to="/contracts" className="list-group-item list-group-item-action">Contracts</Link>
             </div>
         </div>
     );
 };
 
 export default Sidebar;
+
+
