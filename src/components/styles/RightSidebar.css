@@ -1,20 +1,30 @@
 
-
-.right-sidebar ul {
-    list-style-type: none;
-    padding: 0;
+.right-sidebar .list-group {
+    background-color: transparent;
 }
 
-.right-sidebar li {
-    margin-bottom: 15px;
-}
-
-.right-sidebar a {
-    color: #2c3e50;
+.right-sidebar .list-group-item {
+    color: rgba(185, 182, 200, 0.99);
+    border-radius: 1px;
     text-decoration: none;
     font-weight: bold;
+    border: none;
+    background: transparent;
+    cursor: pointer;
 }
 
-.right-sidebar a:hover {
+.right-sidebar .list-group-item:hover,
+.right-sidebar .list-group-item:active,
+.right-sidebar .list-group-item:focus {
     color: #6684a2;
+    outline: none; /* Remove the default focus outline */
+}
+
+.submenu {
+    font-size: smaller;
+        padding: 0 10% 0 10%;
+
+}
+.submenu .list-group-item:hover {
+    text-decoration: none;
 }

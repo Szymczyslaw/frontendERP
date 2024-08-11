@@ -1,15 +1,13 @@
 
 .sidebar .list-group {
-    padding: 0;
     background-color: transparent;
 }
 
 .sidebar .list-group-item {
     color: rgba(185, 182, 200, 0.99);
-    border-radius: 8px;
+    border-radius: 1px;
     text-decoration: none;
     font-weight: bold;
-    padding: 10px 15px;
     border: none;
     background: transparent;
     cursor: pointer;
@@ -23,15 +21,10 @@
 }
 
 .submenu {
-    padding-left: 20px; /* Indent submenu items */
     font-size: smaller;
-}
+        padding: 0 10% 0 10%;
 
-.submenu .list-group-item {
-    padding: 8px 15px;
-    font-weight: normal;
 }
-
 .submenu .list-group-item:hover {
     text-decoration: none;
 }

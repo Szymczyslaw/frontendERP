@@ -13,6 +13,7 @@ import Sidebar from './components/pages/Sidebar';
 import RightSidebar from './components/pages/RightSidebar';
 import AdditionalNavbar from './components/pages/AdditionalNavbar';
 import QuickAccess from './components/pages/QuickAccess';
+import Notifications from './components/pages/Notifications';
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -44,7 +45,8 @@ const App = () => {
                         </Routes>
                     </div>
                     <div className="col-md-2">
-                        <RightSidebar/> {/* Add Right Sidebar */}
+                        <Notifications/>
+                        <RightSidebar/>
                     </div>
                 </div>
             </div>

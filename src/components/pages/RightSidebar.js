@@ -1,26 +1,22 @@
 import React from 'react';
 import '../styles/RightSidebar.css';
 import '../styles/containers/Container.css'
-
+import {Link} from "react-router-dom";
 
 const RightSidebar = () => {
     return (
-        <div className="border-right" id="sidebar-wrapper">
-
-            <div className="right-sidebar container">
-                <div className="title">
-                    Reports
-                </div>
-                <ul>
-                    <li><a href="#">Widget 1</a></li>
-                    <li><a href="#">Widget 2</a></li>
-                    <li><a href="#">Widget 3</a></li>
-                    <li><a href="#">Settings</a></li>
-                    <li><a href="#">Help</a></li>
-                </ul>
+        <div className="container right-sidebar">
+            <div className="title">
+                Reports
+            </div>
+            <div className="list-group">
+                <Link to href="#" className="list-group-item list-group-item-action">Widget 1</Link>
+                <Link to href="#" className="list-group-item list-group-item-action">Widget 2</Link>
+                <Link to href="#" className="list-group-item list-group-item-action">Widget 3</Link>
+                <Link to href="#" className="list-group-item list-group-item-action">Settings</Link>
+                <Link to href="#" className="list-group-item list-group-item-action">Help</Link>
             </div>
         </div>
-
     );
 };
 
