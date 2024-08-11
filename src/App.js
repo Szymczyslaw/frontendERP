@@ -26,6 +26,10 @@ const App = () => {
                         <Sidebar/>
                     </div>
                     <div className="col-md-8">
+                        <div>
+                        <Navbar/>
+                        </div>
+
                         <Routes>
                             <Route path="/" element={<Home/>}/>
                             <Route path="/inventory" element={<Inventory/>}/>
@@ -38,6 +42,7 @@ const App = () => {
                         </Routes>
                     </div>
                     <div className="col-md-2">
+                        <RightSidebar/> {/* Add Right Sidebar */}
                         <RightSidebar/> {/* Add Right Sidebar */}
                     </div>
                 </div>

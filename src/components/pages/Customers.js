@@ -65,8 +65,7 @@ const Customers = () => {
     }, []);
 
   return (
-            <div className="customers container">
-                <div className={styles.container}>
+            <div className="container">
                     <div className="title">Customers</div>
                     {error ? (
                         <p>{error}</p>
@@ -106,7 +105,6 @@ const Customers = () => {
                         </table>
                     )}
                 </div>
-            </div>
     );
 };
 
