@@ -11,6 +11,10 @@ import Contracts from './components/pages/Contracts';
 import Navbar from './components/pages/Navbar';
 import Sidebar from './components/pages/Sidebar';
 import RightSidebar from './components/pages/RightSidebar';
+import AdditionalNavbar from './components/pages/AdditionalNavbar';
+import QuickAccess from './components/pages/QuickAccess';
+
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -21,15 +25,13 @@ const App = () => {
                 <div className="row">
                     <div className="col-12">
                         <Navbar/>
+                        <AdditionalNavbar/>
                     </div>
                     <div className="col-md-2">
                         <Sidebar/>
                     </div>
                     <div className="col-md-8">
-                        <div>
-                        <Navbar/>
-                        </div>
-
+                        <div><QuickAccess/></div>
                         <Routes>
                             <Route path="/" element={<Home/>}/>
                             <Route path="/inventory" element={<Inventory/>}/>
@@ -42,7 +44,6 @@ const App = () => {
                         </Routes>
                     </div>
                     <div className="col-md-2">
-                        <RightSidebar/> {/* Add Right Sidebar */}
                         <RightSidebar/> {/* Add Right Sidebar */}
                     </div>
                 </div>

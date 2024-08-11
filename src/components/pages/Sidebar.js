@@ -16,7 +16,6 @@ const Sidebar = () => {
                 Departments
             </div>
             <div className="list-group">
-                <Link to="/" className="list-group-item list-group-item-action">Home</Link>
                 <Link to="/inventory" className="list-group-item list-group-item-action">Inventory</Link>
                 <Link to="/sales" className="list-group-item list-group-item-action">Sales</Link>
 
