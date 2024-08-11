@@ -2,6 +2,7 @@ import React, {useEffect, useState, useMemo} from 'react';
 import {useNavigate, Link} from 'react-router-dom';
 import {getCustomers} from '../../services/apiService';
 import styles from '../styles/Customers.css';
+import '../styles/containers/Container.css'
 
 const Customers = () => {
     const navigate = useNavigate();
@@ -64,8 +65,7 @@ const Customers = () => {
     }, []);
 
   return (
-        <div className="customers">
-            <div className="container">
+            <div className="customers container">
                 <div className={styles.container}>
                     <div className="title">Customers</div>
                     {error ? (
@@ -107,7 +107,6 @@ const Customers = () => {
                     )}
                 </div>
             </div>
-        </div>
     );
 };
 

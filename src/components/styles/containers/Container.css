@@ -1,0 +1,17 @@
+.container {
+    background-color: #f7f7f7;
+    border-right: 1px solid #ddd;
+    position: relative;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 1000; /* Ensure the sidebar is above other content */
+    border-radius: 1px;}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    color: rgba(0, 6, 39, 0.6);
+    text-align: left; /* Align the text to the left */
+}

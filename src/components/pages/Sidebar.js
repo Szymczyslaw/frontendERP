@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Sidebar.css';
+import '../styles/containers/Container.css'
 
 const Sidebar = () => {
     const [isCustomerMenuOpen, setIsCustomerMenuOpen] = useState(false);
@@ -10,8 +11,8 @@ const Sidebar = () => {
     };
 
     return (
-        <div className="sidebar">
-            <div className="sidebar-title">
+        <div className="container sidebar">
+            <div className="title">
                 Departments
             </div>
             <div className="list-group">

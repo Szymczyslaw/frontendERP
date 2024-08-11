@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {getContracts} from '../../services/apiService';
+import '../styles/containers/Container.css'
 
 const Contracts = () => {
   const [contracts, setContracts] = useState([]);

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/SecondaryNavbar.css';
 
+
 const SecondaryNavbar = () => {
     return (
         <div className="secondary-navbar">
