@@ -12,10 +12,10 @@ const QuickAccess = () => {
         <div className="container">
             <div className="title">Quick Access</div>
             <div className="quick-access-bar">
-                <div className="quick-access-item" style={{backgroundColor: 'rgba(0,255,46,0.35)'}}></div>
-                <div className="quick-access-item" style={{backgroundColor: 'rgba(255,0,0,0.35)'}}></div>
-                <div className="quick-access-item" style={{backgroundColor: 'rgba(0,45,255,0.35)'}}></div>
-                <div className="quick-access-item" style={{backgroundColor: 'rgba(255,242,0,0.35)'}}></div>
+                <div className="quick-access-item" style={{backgroundColor: 'rgba(94,255,124,0.35)'}}></div>
+                <div className="quick-access-item" style={{backgroundColor: 'rgba(255,89,89,0.35)'}}></div>
+                <div className="quick-access-item" style={{backgroundColor: 'rgba(72,104,255,0.35)'}}></div>
+                <div className="quick-access-item" style={{backgroundColor: 'rgba(255,246,99,0.35)'}}></div>
             </div>
         </div>
     );

@@ -3,13 +3,16 @@
     justify-content: space-between; /* Space out the items evenly */
     background-color: transparent; /* Background for the quick access bar */
     padding-top: 2%;
+    margin-right: 10px;
+    margin-left: 10px;
+
 }
 
 .quick-access-item {
     flex: 1; /* Make all items take equal space */
     height: 7rem; /* Height of the rectangles */
-    margin: 0 10px; /* Spacing between the items */
-    border-radius: 1px; /* Optional: rounded corners */
+    margin: 0 0.4%; /* Spacing between the items */
+    border-radius: 1%; /* Optional: rounded corners */
     transition: transform 0.3s ease; /* Smooth animation on hover */
 }
 
