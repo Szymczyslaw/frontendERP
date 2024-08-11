@@ -11,22 +11,12 @@ const QuickAccess = () => {
     return (
         <div className="container">
             <div className="title">Quick Access</div>
-            {error ? (
-                <p>{error}</p>
-            ) : (
-                <table className={styles.table}>
-                    <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Id</th>
-                        <th>Actions</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-
-                    </tbody>
-                </table>
-            )}
+            <div className="quick-access-bar">
+                <div className="quick-access-item" style={{backgroundColor: 'rgba(0,255,46,0.35)'}}></div>
+                <div className="quick-access-item" style={{backgroundColor: 'rgba(255,0,0,0.35)'}}></div>
+                <div className="quick-access-item" style={{backgroundColor: 'rgba(0,45,255,0.35)'}}></div>
+                <div className="quick-access-item" style={{backgroundColor: 'rgba(255,242,0,0.35)'}}></div>
+            </div>
         </div>
     );
 };
