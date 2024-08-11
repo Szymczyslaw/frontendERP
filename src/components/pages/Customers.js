@@ -63,29 +63,25 @@ const Customers = () => {
         fetchCustomers();
     }, []);
 
-    return (
-
+  return (
         <div className="customers">
-                <h2 className={styles.header}>Customers:</h2>
             <div className="container">
-                 <div className={styles.container}>
-                        {error ? (
-                            <p>{error}</p>
-                        ) : (
-                            <table className={styles.table}>
-                                <thead>
+                <div className={styles.container}>
+                    <div className="title">Customers</div>
+                    {error ? (
+                        <p>{error}</p>
+                    ) : (
+                        <table className={styles.table}>
+                            <thead>
                                 <tr>
                                     <th>#</th>
                                     <th>Id</th>
-
                                     <th onClick={() => handleSort('name')} className={styles.sortableHeader}>Name</th>
-                                    <th onClick={() => handleSort('dateAdded')} className={styles.sortableHeader}>Date
-                                        Added
-                                    </th>
+                                    <th onClick={() => handleSort('dateAdded')} className={styles.sortableHeader}>Date Added</th>
                                     <th>Actions</th>
                                 </tr>
-                                </thead>
-                                <tbody>
+                            </thead>
+                            <tbody>
                                 {sortedCustomers.map((customer, index) => (
                                     <tr key={customer.id}>
                                         <td>{index + 1}</td>
@@ -100,20 +96,20 @@ const Customers = () => {
                                         <td>{customer.dateAdded || 'N/A'}</td>
                                         <td>
                                             <button onClick={() => handleEdit(customer.id)}
-                                                    className={styles.button}>Edit
+                                                className={styles.button}>Edit
                                             </button>
                                             <button className={styles.button}>Delete</button>
                                         </td>
                                     </tr>
                                 ))}
-                                </tbody>
-                            </table>
-                        )}
-                    </div>
+                            </tbody>
+                        </table>
+                    )}
                 </div>
             </div>
+        </div>
+    );
+};
 
-            );
-            };
 
             export default Customers;

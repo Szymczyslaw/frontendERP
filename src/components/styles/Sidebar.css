@@ -9,11 +9,7 @@
     width: 200px;
     overflow-y: auto;
     z-index: 1000; /* Ensure the sidebar is above other content */
-    /* Add a subtle gradient for the embossed effect */
-    background: linear-gradient(145deg, #ffffff, #d5d5d5);
-    /* Add box shadows for the 3D effect */
- box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
+    border-radius: 1px;
 }
 
 .sidebar .list-group {
