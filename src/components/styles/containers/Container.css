@@ -22,7 +22,6 @@
 
 .table {
     background-color: transparent;
-    width: 100%;
     border-collapse: collapse; /* Ensure borders are consistent */
-    margin: 0 5% 0 5%;
+    align-content: center;
 }
