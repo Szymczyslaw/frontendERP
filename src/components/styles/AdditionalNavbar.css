@@ -1,6 +1,33 @@
-.additional-navbar{
-    margin: auto;
-    padding: 1%;
-    color: #6684a2;
+.additional-navbar {
+    display: flex;
+    justify-content: space-between; /* Space out left and right sections */
+    background-color: transparent;
+    color: #566a85;
+    padding: 10px;
+    align-items: center; /* Center items vertically */
+}
+
+.additional-navbar a {
+    color: #566a85;
     text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+}
+
+.additional-navbar .left-signs {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.additional-navbar .right-signs {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.additional-navbar a:hover {
+    text-decoration: none;
+    color: rgba(185, 182, 182, 0.99);
 }

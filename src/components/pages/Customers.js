@@ -64,49 +64,44 @@ const Customers = () => {
         fetchCustomers();
     }, []);
 
-  return (
-            <div className="container">
-                    <div className="title">Customers</div>
-                    {error ? (
-                        <p>{error}</p>
-                    ) : (
-                        <table className={styles.table}>
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Id</th>
-                                    <th onClick={() => handleSort('name')} className={styles.sortableHeader}>Name</th>
-                                    <th onClick={() => handleSort('dateAdded')} className={styles.sortableHeader}>Date Added</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {sortedCustomers.map((customer, index) => (
-                                    <tr key={customer.id}>
-                                        <td>{index + 1}</td>
-                                        <td>
-                                            <Link to={`/customers/${customer.id}`} className={styles.link}>
-                                                {customer.id}
-                                            </Link>
-                                        </td>
-                                        <td>
-                                            {customer.firstName} {customer.lastName}
-                                        </td>
-                                        <td>{customer.dateAdded || 'N/A'}</td>
-                                        <td>
-                                            <button onClick={() => handleEdit(customer.id)}
-                                                className={styles.button}>Edit
-                                            </button>
-                                            <button className={styles.button}>Delete</button>
-                                        </td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    )}
-                </div>
+return (
+        <div className="container table-container">
+            <div className="title">Customers</div>
+            {error ? (
+                <p>{error}</p>
+            ) : (
+                <table className="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Id</th>
+                            <th onClick={() => handleSort('name')} className="sortableHeader">Name</th>
+                            <th onClick={() => handleSort('dateAdded')} className="sortableHeader">Date Added</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {sortedCustomers.map((customer, index) => (
+                            <tr key={customer.id}>
+                                <td>{index + 1}</td>
+                                <td>
+                                    <Link to={`/customers/${customer.id}`} className="link">
+                                        {customer.id}
+                                    </Link>
+                                </td>
+                                <td>{customer.firstName} {customer.lastName}</td>
+                                <td>{customer.dateAdded || 'N/A'}</td>
+                                <td>
+                                    <button onClick={() => handleEdit(customer.id)} className="button">Edit</button>
+                                    <button className="button">Delete</button>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            )}
+        </div>
     );
 };
 
-
-            export default Customers;
+export default Customers;

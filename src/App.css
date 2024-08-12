@@ -1,10 +1,9 @@
 /* App.css */
 
 html, body, #root {
-    height: 100%;
+    height: max-content;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     background-color: rgba(155, 157, 197, 0.09);;
 
 }

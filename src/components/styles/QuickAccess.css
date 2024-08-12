@@ -7,14 +7,18 @@
 
 .quick-access-item {
     flex: 1; /* Make all items take equal space */
-    height: 7rem; /* Height of the rectangles */
-    margin: 6px 0.4% 0 0; /* Spacing between the items */
-    border-radius: 1%; /* Optional: rounded corners */
-    transition: transform 0.3s ease; /* Smooth animation on hover */
+    height: 8rem; /* Height of the rectangles */
+    margin: 6px 0.5% 0 0.5%; /* Spacing between the items */
+    border-radius: 1%; /* Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation on hover */
+    border-right: 3px solid rgba(33, 32, 32, 0.18);
+    border-bottom: 3px solid rgba(33, 32, 32, 0.18);
     padding-top: 5px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.7); /* Box shadow for raised effect */
 }
 
 .quick-access-item:hover {
     transform: scale(1.05); /* Slightly enlarge the item on hover */
     cursor: pointer; /* Change cursor to pointer on hover */
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3), -6px -6px 12px rgba(255, 255, 255, 0.8); /* More pronounced shadow on hover */
 }

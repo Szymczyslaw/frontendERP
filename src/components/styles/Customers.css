@@ -1,8 +1,14 @@
+/* Header styling */
+.header {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 /* Button styling */
 .button {
     padding: 5px 10px;
     margin: 5px;
-    font-size: 14px;
     color: white;
     background-color: #007bff;
     border: none;
@@ -14,22 +20,15 @@
     background-color: #0056b3;
 }
 
-/* Table styling */
-.table {
-    width: 100%;
-    border-collapse: collapse; /* Ensure borders are consistent */
-    margin-top: 20px;
-}
 
 .table th, .table td {
     padding: 12px 15px;
     border: 1px solid #ddd; /* Adding border for table cells */
     text-align: center;
-    font-size: 14px;
 }
 
 .table th {
-    background-color: #2c3e50;
+    background-color: transparent;
     color: white;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -38,11 +37,11 @@
 }
 
 .table td {
-    background-color: #fff;
+    background-color: transparent;
 }
 
 .table tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: transparent;
 }
 
 .table tr:hover {
