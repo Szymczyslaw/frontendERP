@@ -1,64 +1,60 @@
-/* Header styling */
-.header {
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
+/* Customers.css */
+.table-container {
+    background-color: transparent; /* Make the container's background transparent */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 1px;
+    max-width: 1200px;
+    margin: auto;
+    color: gray; /* Set default text color to gray */
 }
 
-/* Button styling */
-.button {
-    padding: 5px 10px;
-    margin: 5px;
-    color: white;
-    background-color: #007bff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: transparent; /* Make the table's background transparent */
+    color: gray; /* Ensure all table text is gray */
 }
-
-.button:hover {
-    background-color: #0056b3;
-}
-
 
 .table th, .table td {
     padding: 12px 15px;
-    border: 1px solid #ddd; /* Adding border for table cells */
+    border: 1px solid rgba(211, 211, 211, 0.3); /* Light gray border for a subtle effect */
     text-align: center;
+    font-size: 14px;
+    color: gray; /* Set text color to gray for both headers and cells */
 }
 
 .table th {
-    background-color: transparent;
-    color: white;
+    background-color: transparent; /* Keep header background transparent */
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-weight: 600;
     cursor: pointer;
 }
 
-.table td {
-    background-color: transparent;
-}
-
 .table tr:nth-child(even) {
-    background-color: transparent;
+    background-color: transparent; /* Transparent background for even rows */
 }
 
 .table tr:hover {
-    background-color: #f1f1f1;
+    background-color: rgba(245, 245, 245, 0.5); /* Light gray hover effect for rows */
 }
 
-/* Hover effect for sortable headers */
+.sortableHeader {
+    cursor: pointer;
+    color: gray; /* Ensure sortable header text is gray */
+}
+
 .sortableHeader:hover {
-    background-color: #34495e;
+    background-color: rgba(52, 73, 94, 0.24);
+    color: white; /* White color on hover for contrast */
 }
 
-/* Link styling */
 .link {
-    color: #007bff;
+    color: gray; /* Ensure links are gray */
     text-decoration: none;
 }
 
 .link:hover {
     text-decoration: underline;
+    color: #007bff; /* Optional: Change link color to blue on hover */
 }
