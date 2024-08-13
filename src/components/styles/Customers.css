@@ -72,6 +72,7 @@
     cursor: pointer;
     appearance: none;
     outline: none;
+    width: 9rem;
 }
 
 .action-select option {
@@ -90,8 +91,9 @@
 .action-select {
     background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="gray" d="M2 0L0 2h4L2 0zM2 5L0 3h4L2 5z"/></svg>');
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: right 5% center;
     background-size: 1rem 1rem;
+    margin: auto;
 }
 
 /* Hover effect for dropdown options */
