@@ -1,60 +1,114 @@
-/* Customers.css */
 .table-container {
-    background-color: transparent; /* Make the container's background transparent */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 1px;
     max-width: 1200px;
     margin: auto;
-    color: gray; /* Set default text color to gray */
+    color: gray;
 }
 
 .table {
     width: 100%;
     border-collapse: collapse;
-    background-color: transparent; /* Make the table's background transparent */
-    color: gray; /* Ensure all table text is gray */
+    color: gray;
 }
 
 .table th, .table td {
-    padding: 12px 15px;
-    border: 1px solid rgba(211, 211, 211, 0.3); /* Light gray border for a subtle effect */
+    border: 1px solid rgba(211, 211, 211, 0.3);
     text-align: center;
+    vertical-align: middle;
     font-size: 14px;
-    color: gray; /* Set text color to gray for both headers and cells */
 }
 
 .table th {
-    background-color: transparent; /* Keep header background transparent */
+    font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    font-weight: 600;
     cursor: pointer;
+    padding: 12px 15px;
+    color: grey;
+}
+
+.table td {
+    padding: 12px 15px;
+    color: gray;
 }
 
 .table tr:nth-child(even) {
-    background-color: transparent; /* Transparent background for even rows */
+    background-color: transparent;
+    color: gray;
 }
 
 .table tr:hover {
-    background-color: rgba(245, 245, 245, 0.5); /* Light gray hover effect for rows */
+    background-color: rgba(245, 245, 245, 0.5);
 }
 
 .sortableHeader {
     cursor: pointer;
-    color: gray; /* Ensure sortable header text is gray */
+    color: gray;
 }
 
 .sortableHeader:hover {
     background-color: rgba(52, 73, 94, 0.24);
-    color: white; /* White color on hover for contrast */
+    color: white;
 }
 
 .link {
-    color: gray; /* Ensure links are gray */
+    color: gray;
     text-decoration: none;
 }
 
 .link:hover {
     text-decoration: underline;
-    color: #007bff; /* Optional: Change link color to blue on hover */
+    color: #007bff;
+}
+
+.action-select {
+    padding: 0.5rem 1.2rem;
+    font-size: 14px;
+    color: gray;
+    background-color: transparent;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    appearance: none;
+    outline: none;
+}
+
+.action-select option {
+    color: gray;
+}
+
+.action-select:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.action-select:focus {
+    border-color: #007bff;
+}
+
+/* Custom Dropdown Arrow */
+.action-select {
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="gray" d="M2 0L0 2h4L2 0zM2 5L0 3h4L2 5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 1rem 1rem;
+}
+
+/* Hover effect for dropdown options */
+.action-select option:hover {
+    background-color: rgba(52, 73, 94, 0.24);
+    color: white;
+}
+
+.search-bar2 {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    border-radius: 1px;
+    border: none;
+    border-bottom: 2px solid rgba(0, 6, 39, 0.28);
+    outline: none;
+    transition: border-bottom-color 0.3s;
+    background-color: transparent;
 }

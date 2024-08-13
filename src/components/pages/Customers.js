@@ -1,17 +1,36 @@
-import React, {useEffect, useState, useMemo} from 'react';
-import {useNavigate, Link} from 'react-router-dom';
-import {getCustomers} from '../../services/apiService';
-import styles from '../styles/Customers.css';
-import '../styles/containers/Container.css'
+import React, { useEffect, useState, useMemo } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
+import { getCustomers } from '../../services/apiService';
+import '../styles/Customers.css';
+import '../styles/containers/Container.css';
 
 const Customers = () => {
     const navigate = useNavigate();
     const [customers, setCustomers] = useState([]);
     const [error, setError] = useState('');
-    const [sortConfig, setSortConfig] = useState({key: null, direction: 'ascending'});
+    const [sortConfig, setSortConfig] = useState({ key: null, direction: 'ascending' });
+    const [searchQuery, setSearchQuery] = useState(''); // State for search query
 
     const handleEdit = (customerId) => {
         navigate(`/edit-customer/${customerId}`);
+    };
+
+    const handleDelete = (customerId) => {
+        // Add delete functionality here
+        console.log(`Deleting customer with ID: ${customerId}`);
+    };
+
+    const handleActionChange = (event, customerId) => {
+        const selectedAction = event.target.value;
+
+        if (selectedAction === 'edit') {
+            handleEdit(customerId);
+        } else if (selectedAction === 'delete') {
+            handleDelete(customerId);
+        }
+
+        // Reset the select element to default
+        event.target.selectedIndex = 0;
     };
 
     const handleSort = (key) => {
@@ -19,11 +38,21 @@ const Customers = () => {
         if (sortConfig.key === key && sortConfig.direction === 'ascending') {
             direction = 'descending';
         }
-        setSortConfig({key, direction});
+        setSortConfig({ key, direction });
     };
 
+    const filteredCustomers = useMemo(() => {
+        return customers.filter((customer) => {
+            const name = `${customer.firstName} ${customer.lastName}`.toLowerCase();
+            return (
+                customer.id.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                name.includes(searchQuery.toLowerCase())
+            );
+        });
+    }, [customers, searchQuery]);
+
     const sortedCustomers = useMemo(() => {
-        let sortableItems = [...customers];
+        let sortableItems = [...filteredCustomers];
         if (sortConfig !== null) {
             sortableItems.sort((a, b) => {
                 let aValue = a[sortConfig.key];
@@ -44,7 +73,7 @@ const Customers = () => {
             });
         }
         return sortableItems;
-    }, [customers, sortConfig]);
+    }, [filteredCustomers, sortConfig]);
 
     useEffect(() => {
         const fetchCustomers = async () => {
@@ -64,9 +93,16 @@ const Customers = () => {
         fetchCustomers();
     }, []);
 
-return (
+    return (
         <div className="container table-container">
             <div className="title">Customers</div>
+            <input
+                type="text"
+                placeholder="Search by ID or Name"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="search-bar2"
+            />
             {error ? (
                 <p>{error}</p>
             ) : (
@@ -92,8 +128,14 @@ return (
                                 <td>{customer.firstName} {customer.lastName}</td>
                                 <td>{customer.dateAdded || 'N/A'}</td>
                                 <td>
-                                    <button onClick={() => handleEdit(customer.id)} className="button">Edit</button>
-                                    <button className="button">Delete</button>
+                                    <select
+                                        className="action-select"
+                                        onChange={(e) => handleActionChange(e, customer.id)}
+                                    >
+                                        <option value="" disabled selected>Choose Action</option>
+                                        <option value="edit">Edit</option>
+                                        <option value="delete">Delete</option>
+                                    </select>
                                 </td>
                             </tr>
                         ))}

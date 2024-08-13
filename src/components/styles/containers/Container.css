@@ -24,13 +24,16 @@
     padding: 8px 12px;
     margin: 5px;
     font-size: 14px;
-    color: white;
-    background-color: #728fab;
+    color: grey;
+    background-color: transparent;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
 .button:hover {
-    background-color: rgba(114, 143, 171, 0.84);
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.3);
 }
+
+
