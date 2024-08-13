@@ -1,0 +1,21 @@
+/* Footer.css */
+
+.footer {
+    background-color: transparent;
+    color: #566a85;;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    margin: auto;
+    padding: 2%;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: auto;
+}

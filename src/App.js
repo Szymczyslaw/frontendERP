@@ -14,6 +14,7 @@ import RightSidebar from './components/pages/RightSidebar';
 import AdditionalNavbar from './components/pages/AdditionalNavbar';
 import QuickAccess from './components/pages/QuickAccess';
 import Notifications from './components/pages/Notifications';
+import Footer from './components/pages/Footer';
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -49,6 +50,8 @@ const App = () => {
                         <RightSidebar/>
                     </div>
                 </div>
+                                <Footer /> {/* Add Footer */}
+
             </div>
         </Router>
     );
